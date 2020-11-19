@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(void)
+{
+	int ch,n,i,j;
+	scanf("%d %c", &n,&ch);
+	for (i=1; i<=n; i++){     //控制 n行
+		for (j=1; j<=i; j++){     //控制第 n行有 n个字母
+			printf("%c", ch);
+		}
+		printf("\n");
+	}
+
+	return 0;
+}
+//字符三角形
