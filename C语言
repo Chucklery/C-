@@ -1,15 +1,25 @@
-#include<stdio.h>
-int main(void)
+#include <stdio.h>
+int main ()
 {
-	int ch,n,i,j;
-	scanf("%d %c", &n,&ch);
-	for (i=1; i<=n; i++){     //控制 n行
-		for (j=1; j<=i; j++){     //控制第 n行有 n个字母
-			printf("%c", ch);
-		}
-		printf("\n");
-	}
+    int n,a,i,j,q,w;
+    char c;
+    scanf("%d",&n);
+for (i=1;i<=n;i++)
+  {       getchar();
+        scanf("%c %d",&c,&a);
+        for(q=1;q<=a;q++)
+        {
+           for(j=1;j<=a-q;j++)printf(" ");
+           for(j=1;j<=2*q-1;j++)printf("%c",c);
+           printf("\n");
+        }
+        for(w=1;w<a;w++)
+        {
+            for(j=1;j<=w;j++)printf(" ");
+            for(j=1;j<2*a-2*w;j++)printf("%c",c);
+            printf("\n");
+        }
 
-	return 0;
+   }
 }
-//字符三角形
+//菱形
