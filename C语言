@@ -1,4 +1,4 @@
-异或运算：
+异或运算：（最优）
 #include<stdio.h>
 int main(void)
 {
