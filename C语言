@@ -21,3 +21,16 @@ int main(void)
 	//printf("%d",arr[0]);
    return 0;
 }找出单身狗
+#include<stdio.h>
+int main(void)
+{
+	int arr[]={1,1,2,2,3,3,4,4,5} ;
+	int sz=sizeof(arr)/sizeof(arr[0]);
+	int item=0,i;
+	for(i=0;i<sz;i++)
+	{
+		item=item^arr[i];
+	}
+	printf("%d",item);
+	
+}算法优化之后用异或与运算进行优化
