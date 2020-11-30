@@ -1,0 +1,25 @@
+//第一种
+
+int func(int n)
+{
+	int i, m = 0;
+	while (n / 10 != 0)//提取每一位数
+	{
+		i = n % 10;
+		n = n / 10;
+		m = m * 10 + i;//倒序每位递增
+	}
+	if (n != 0)//上述中最高位会丢失，需要补充
+	{
+		m = m * 10 + n;
+	}
+	return m;
+//第二种
+int daoshu(int a){
+	int t=0;
+	while(a!=0){
+		t=t*10+a%10;
+		a/=10;
+	}
+	return t;
+}
