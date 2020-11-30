@@ -1,0 +1,40 @@
+#include <stdio.h>
+int a,b,c,max,min,x,y,z;
+int fuc(int n)
+{
+	a=n/100; b=n/10%10; c=n%10;
+	if(a<=b&&b<=c) {x=c;y=b;z=a;} 
+	if(a<=c&&b>=c) {z=a;y=c;x=b;}
+	if(b<=a&&a<=c) {z=b;y=a;x=c;}
+	if(b<=c&&c<=a) {z=b;y=c;x=a;}
+	if(c<=a&&a<=b) {z=c;y=a;x=b;}
+	if(c<=b&&b<=a) {z=c;y=b;x=a;}
+	return x*100+y*10+z;
+}
+int fuc1(int n)
+{
+	a=n/100; b=n/10%10; c=n%10;
+	if(a<=b&&b<=c) {x=c;y=b;z=a;} 
+	if(a<=c&&b>=c) {z=a;y=c;x=b;}
+	if(b<=a&&a<=c) {z=b;y=a;x=c;}
+	if(b<=c&&c<=a) {z=b;y=c;x=a;}
+	if(c<=a&&a<=b) {z=c;y=a;x=b;}
+	if(c<=b&&b<=a) {z=c;y=b;x=a;}
+	return z*100+y*10+x;
+}
+int main()
+{
+	int n;
+	while(scanf("%d",&n)!=EOF)
+	{
+	    max=fuc(n); min=fuc1(n);
+	    while(max-min!=495)
+	    {
+	    	max=fuc(n); min=fuc1(n);
+	    	printf("%d: %d-%d=%d\n",n,max,min,max-min);
+	    	n=max-min;
+		}
+		printf("\n");
+	}
+	return 0;
+}
